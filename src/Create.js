@@ -39,9 +39,6 @@ function Create() {
     if (!/\S+@\S+.\S+/.test(values.email)) {
       validationErrors.email = "*E-mail Required";
     }
-    // else if (!/\S+@\S\.\S+/.test(values.email)) {
-    //   validationErrors.email = "*E-mail Is Not Valid";
-    // }
 
     setErrors(validationErrors);
 
