@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Home from "./Home";
+import "bootstrap/dist/css/bootstrap.min.css";
+import AddEdit from "./AddEdit";
+import Signup from "./Signup";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Login from "./Login";
+import Error from "./Error";
 
 function App() {
+  const isCreate = true;
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+          <Route path="/Home" element={<Home />}></Route>
+          <Route path="/create" element={<AddEdit isCreate={isCreate} />} />
+          <Route
+            path="/update/:id"
+            element={<AddEdit isUpdate={isCreate} />}
+          ></Route>
+          <Route path="*" Component={Error} />
+        </Routes>
+      </BrowserRouter>
+      <ToastContainer theme="dark" position="bottom-center" autoClose={1500} />
+    </>
   );
 }
 
