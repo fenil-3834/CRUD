@@ -44,18 +44,6 @@ const Signup = () => {
     return Object.keys(errors).length === 0;
   };
 
-  // const validateEmail = () => {
-  //   if (!/\S+@\S+.\S+/.test(email)) {
-  //     setEmailError("*Email is Required");
-  //   }
-  // };
-
-  // const validatePassword = () => {
-  //   if (!password) {
-  //     setPasswordError("*Password is Required");
-  //   }
-  // };
-
   const handleApi = (e) => {
     e.preventDefault();
     const isValid = validateForm();
