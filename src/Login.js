@@ -33,9 +33,12 @@ const Login = () => {
 
   const [formErrors, setFormErrors] = useState({});
   const validateForm = () => {
+    const trimmedEmail = email.trim();
     const errors = {};
     if (!/\S+@\S+.\S+/.test(email)) {
       errors.email = "*Email is Required";
+    } else if (trimmedEmail !== email) {
+      errors.email = "Email should not start with white spaces";
     }
 
     if (!password) {
@@ -119,7 +122,6 @@ const Login = () => {
                 <GoogleLogin
                   onSuccess={(credentialResponse) => {
                     var decoded = jwt_decode(credentialResponse.credential);
-
                     console.log(decoded);
                   }}
                   onError={() => {
