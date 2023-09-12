@@ -87,7 +87,7 @@ function Home() {
               <div className="table-responsive">
                 <table className="table table-striped">
                   <thead>
-                    <tr className="text-capitalize align-middle text-center">
+                    <tr className="text-capitalize text-center">
                       <th>Picture</th>
                       <th>Title</th>
                       <th>First Name</th>

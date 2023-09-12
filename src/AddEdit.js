@@ -142,7 +142,7 @@ const AddEdit = ({ isCreate, isUpdate }) => {
       <div className="d-flex align-item-center justify-content-center ">
         <div className="w-50 border bg-white shadow px-5 pt-3 pb-4 rounded ">
           <h1 className="text-center">
-            <u>{isCreate ? "Add User" : "update user"}</u>
+            <u>{isCreate ? "Add User" : "Update user"}</u>
           </h1>
           {isLoading && isUpdate ? (
             <div class="content">
