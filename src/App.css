@@ -64,6 +64,10 @@
 .images{
   border-radius: 50%;
 }
+
+.images:hover{
+  transform: scale(90%);
+}
 .flex{
   display: flex;
   justify-content: space-between;
@@ -123,6 +127,7 @@
     -webkit-mask-position-x: 0, 0%;
   }
 }
+
 
 /* --------------------------------------- */
 

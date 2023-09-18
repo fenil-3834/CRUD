@@ -98,7 +98,7 @@ function Home() {
                   <tbody>
                     {data.map((user) => {
                       return (
-                        <tr className="text-capitalize align-middle text-center">
+                        <tr className="text-capitalize align-middle text-center ">
                           <td className="photow">
                             <img
                               src={user.picture}
