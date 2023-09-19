@@ -67,10 +67,6 @@ function Create() {
     setValues({ ...values, [name]: value });
   };
 
-  // const handleValues = (key, value) => {
-  //   setValues({ ...values, [key]: value });
-  // };
-
   return (
     <div className="container mt-5">
       <div className="d-flex align-item-center justify-content-center ">
